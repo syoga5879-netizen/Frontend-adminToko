@@ -75,11 +75,32 @@ export const ProductProvider = ({ children }) => {
     return res.data.data; // <-- Ubah dari res.data menjadi res.data.data
   };
 
+  // 1. Ambil daftar buku (mendukung parameter page & search)
+const getBooks = async ({ page = 1, search = "" } = {}) => {
+  const response = await apiClient.get(`/books?page=${page}&search=${search}`);
+  return response.data;
+};
+
+// 2. Tambah buku baru (dengan FormData untuk upload file)
+const addBook = async (formData) => {
+  const response = await apiClient.post("/books", formData, {
+    headers: { "Content-Type": "multipart/form-data" },
+  });
+  return response.data;
+};
+
+// 3. Hapus buku
+const deleteBook = async (id) => {
+  const response = await apiClient.delete(`/books/${id}`);
+  return response.data;
+};
+
   // GET PRODUCTS (PAGINATION & FILTER)
   const getProducts = async ({ page = 1, limit = 10, category_id = "", keyword = "" }) => {
     const res = await apiClient.get(`/products?page=${page}&limit=${limit}&category_id=${category_id}&keyword=${keyword}`);
     return res.data.data;
   };
+
 
   // EXPORT PROVIDER
   return (

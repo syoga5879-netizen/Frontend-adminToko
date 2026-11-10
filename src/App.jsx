@@ -12,6 +12,8 @@ import AboutPage from './pages/adminpages/AboutPage';
 import Cart from './pages/frontpages/Cart';
 import ProductForm from "./pages/adminpages/ProductForm";
 import ProductEdit from "./pages/adminpages/ProductEdit";
+import BookList from "./pages/admin/BookList";
+import BookForm from "./pages/admin/BookForm";
 
 function App() { 
   return ( 
@@ -42,6 +44,8 @@ function App() {
         <Route path="about" element={<AboutPage />} /> 
         <Route path="add-product" element={<ProductForm />} />
         <Route path="edit-product/:id" element={<ProductEdit />} />
+        <Route path="/admin/books" element={<BookList />} />
+        <Route path="/admin/books/create" element={<BookForm />} />
       </Route> 
     </Routes>
 
