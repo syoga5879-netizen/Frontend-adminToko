@@ -12,6 +12,9 @@ export default function Sidebar({ sidebarOpen, setSidebarOpen }) {
         <Link to="/admin/about" className="hover:bg-gray-200 p-2 rounded"> 
           About 
         </Link> 
+        <Link to="/admin/books" className="hover:bg-gray-200 p-2 rounded"> 
+  Data Buku 
+</Link>
 
         <Link to="/admin/info" className="hover:bg-gray-200 p-2 rounded"> 
           Info 

@@ -99,7 +99,7 @@ export default function BookForm() {
           {(Array.isArray(categories) ? categories : categories.data || []).map(
             (cat) => (
               <option key={cat.category_id} value={cat.category_id}>
-                {cat.name}
+                {cat.category}
               </option>
             )
           )}

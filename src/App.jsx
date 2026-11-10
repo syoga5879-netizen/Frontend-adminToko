@@ -12,8 +12,8 @@ import AboutPage from './pages/adminpages/AboutPage';
 import Cart from './pages/frontpages/Cart';
 import ProductForm from "./pages/adminpages/ProductForm";
 import ProductEdit from "./pages/adminpages/ProductEdit";
-import BookList from "./pages/admin/BookList";
-import BookForm from "./pages/admin/BookForm";
+import BookList from "./pages/adminpages/BookList";
+import BookForm from "./pages/adminpages/BookForm";
 
 function App() { 
   return ( 
